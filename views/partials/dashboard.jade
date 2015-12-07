@@ -1,0 +1,84 @@
+.container(ng-init='init()')
+  .row
+    table.table.dashboard
+      thead
+        tr
+          th.header(colspan='4') Choose your Game
+        tr
+          th.size Size
+          th.current View
+          th.join Join
+          th.start Start
+      tbody
+        tr
+          td.game-type Learner (9x9)
+          td.current
+            .game-name(ng-repeat='game in games | games:9:true:false')
+              a(ui-sref='go({id: game._id})')
+                span.black-name {{game.blackPlayer.firstName || 'Mr. Black'}}
+                | - 
+                span.white-name {{game.whitePlayer.firstName || 'Mr. White'}}
+          td.join
+            .game-name(ng-repeat='game in games | games:9:false:true')
+              span.black-name(ng-show='game.blackPlayer') {{game.blackPlayer.firstName || 'Mr. Black'}}
+              span.white-name(ng-show='game.whitePlayer') {{game.whitePlayer.firstName || 'Mr. White'}}
+              | - 
+              input.new-stone.black-stone(type='button' href='#' ng-show='game.whitePlayer' ng-click='go(game._id)' title='Join as black') 
+              input.new-stone.white-stone(type='button' href='#' ng-show='game.blackPlayer' ng-click='go(game._id)' title='Join as white')
+          td.start
+            input.new-stone.black-stone(type='button' href='#' ng-click='new(9, false)' title='Start new game as black')
+            input.new-stone.white-stone(type='button' href='#' ng-click='new(9, true)' title='Start new game as white')
+        tr
+          td.game-type Beginner (13x13)
+          td.current
+            .game-name(ng-repeat='game in games | games:13:true:false')
+              a(ui-sref='go({id: game._id})')
+                span.black-name {{game.blackPlayer.firstName || 'Mr. Black'}}
+                | - 
+                span.white-name {{game.whitePlayer.firstName || 'Mr. White'}}
+          td.join
+            .game-name(ng-repeat='game in games | games:13:false:true')
+              span.black-name(ng-show='game.blackPlayer') {{game.blackPlayer.firstName || 'Mr. Black'}}
+              span.white-name(ng-show='game.whitePlayer') {{game.whitePlayer.firstName || 'Mr. White'}}
+              | - 
+              input.new-stone.black-stone(type='button' href='#' ng-show='game.whitePlayer' ng-click='go(game._id)' title='Join as black') 
+              input.new-stone.white-stone(type='button' href='#' ng-show='game.blackPlayer' ng-click='go(game._id)' title='Join as white')
+          td.start
+            input.new-stone.black-stone(type='button' href='#' ng-click='new(13, false)' title='Start new game as black')
+            input.new-stone.white-stone(type='button' href='#' ng-click='new(13, true)' title='Start new game as white')
+        tr
+          td.game-type Archaic (17x17)
+          td.current
+            .game-name(ng-repeat='game in games | games:17:true:false')
+              a(ui-sref='go({id: game._id})')
+                span.black-name {{game.blackPlayer.firstName || 'Mr. Black'}}
+                | - 
+                span.white-name {{game.whitePlayer.firstName || 'Mr. White'}}
+          td.join
+            .game-name(ng-repeat='game in games | games:17:false:true')
+              span.black-name(ng-show='game.blackPlayer') {{game.blackPlayer.firstName || 'Mr. Black'}}
+              span.white-name(ng-show='game.whitePlayer') {{game.whitePlayer.firstName || 'Mr. White'}}
+              | - 
+              input.new-stone.black-stone(type='button' href='#' ng-show='game.whitePlayer' ng-click='go(game._id)' title='Join as black') 
+              input.new-stone.white-stone(type='button' href='#' ng-show='game.blackPlayer' ng-click='go(game._id)' title='Join as white')
+          td.start
+            input.new-stone.black-stone(type='button' href='#' ng-click='new(17, false)' title='Start new game as black')
+            input.new-stone.white-stone(type='button' href='#' ng-click='new(17, true)' title='Start new game as white')
+        tr
+          td.game-type Standard (19x19)
+          td.current
+            .game-name(ng-repeat='game in games | games:19:true:false')
+              a(ui-sref='go({id: game._id})')
+                span.black-name {{game.blackPlayer.firstName || 'Mr. Black'}}
+                | - 
+                span.white-name {{game.whitePlayer.firstName || 'Mr. White'}}
+          td.join
+            .game-name(ng-repeat='game in games | games:19:false:true')
+              span.black-name(ng-show='game.blackPlayer') {{game.blackPlayer.firstName || 'Mr. Black'}}
+              span.white-name(ng-show='game.whitePlayer') {{game.whitePlayer.firstName || 'Mr. White'}}
+              | - 
+              input.new-stone.black-stone(type='button' href='#' ng-show='game.whitePlayer' ng-click='go(game._id)' title='Join as black') 
+              input.new-stone.white-stone(type='button' href='#' ng-show='game.blackPlayer' ng-click='go(game._id)' title='Join as white')
+          td.start
+            input.new-stone.black-stone(type='button' href='#' ng-click='new(19, false)' title='Start new game as black')
+            input.new-stone.white-stone(type='button' href='#' ng-click='new(19, true)' title='Start new game as white')

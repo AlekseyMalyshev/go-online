@@ -1,0 +1,151 @@
+
+form.login button {
+  color: #ffffff;
+}
+
+button.facebook {
+  background-color: #36549E;
+}
+
+button.linkedin {
+  background-color: #0079BD;
+}
+
+button.twitter {
+  background-color: #00ACF6;
+}
+
+div.avatar {
+  text-align: center;
+}
+
+ul#user-menu {
+  min-width: 50px;
+}
+
+table.dashboard th {
+  text-align: center;
+}
+
+th.header {
+  font-size: 18px;
+}
+
+th.size {
+  width: 20%;
+}
+
+th.current {
+  width: 40%;
+}
+
+th.join {
+  width: 30%;
+}
+
+th.start {
+  width: 15%;
+  min-width: 55px;
+}
+
+table.dashboard td.game-type {
+  font-weight: bold;
+}
+
+table.dashboard td.current {
+  padding: 0;
+  text-align: center;
+}
+
+table.dashboard td.join {
+  padding: 0;
+  text-align: center;
+}
+
+table.dashboard td.start {
+  padding: 0;
+  vertical-align: top;
+  text-align: center;
+}
+
+div.game-name {
+  padding: 2px;
+  display: block;
+}
+
+div.game-name>a {
+  text-decoration: none;
+}
+
+span.white-name,
+span.black-name {
+  padding: 3px 5px 5px 5px;
+  border-width: 1px;
+  border-radius: 3px;
+}
+
+span.black-name {
+  background: -webkit-linear-gradient(left top, #888888, #000000); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #888888, #000000); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #888888, #000000); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #888888, #000000); /* Standard syntax */
+  color: #ffffff;
+}
+
+span.white-name {
+  background: -webkit-linear-gradient(left top, #ffffff, #cccccc); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #ffffff, #cccccc); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #ffffff, #cccccc); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #ffffff, #cccccc); /* Standard syntax */
+  color: #000000;
+}
+
+input.new-stone {
+  margin: 3px;
+  border-width: 1px;
+  border-radius: 50%;
+  width: 34px;
+  height: 18px;
+  outline: none;
+}
+
+.black-stone {
+  opacity: 1.0 !important;
+  background: -webkit-linear-gradient(left top, #888888, #000000); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #888888, #000000); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #888888, #000000); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #888888, #000000); /* Standard syntax */
+}
+
+.white-stone {
+  opacity: 1.0 !important;
+  background: -webkit-linear-gradient(left top, #ffffff, #cccccc); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #ffffff, #cccccc); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #ffffff, #cccccc); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #ffffff, #cccccc); /* Standard syntax */
+}
+
+table.go>tbody {
+  border: 3px solid #000000;
+}
+
+table.go {
+  margin-bottom: 75px;
+}
+
+table.go td {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000000;
+}
+
+div.stone-place {
+  cursor: pointer;
+  position: relative;
+  top: 20px;
+  left: -18px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+

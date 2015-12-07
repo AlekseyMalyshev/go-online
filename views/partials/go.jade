@@ -1,0 +1,33 @@
+.container(ng-init='init()')
+  .row
+    table.go
+      thead
+        tr
+          th(colspan='{{game.size + 1}}')
+            h1.text-center Super Go
+        tr
+          th(colspan='{{(game.size + 1) / 2}}')
+            span.black-name {{game.blackPlayer.firstName || 'Mr. Black'}}
+            span.pull-right(ng-if='game.state === 3') Black quit
+            span.pull-right(ng-if='game.state === 4') White quit
+            span.pull-right(ng-if='game.state === 6') Black lost
+            span.pull-right(ng-if='game.state === 5') White lost
+            span.pull-right(ng-if='player === 1 && game.state === 1')
+              |(
+              a(href='#' ng-click='yeld()') Yield
+              | 
+              a(href='#' ng-click='quit()') Quit
+              |) 
+              |Your turn
+          th(colspan='{{(game.size + 1) / 2}}')
+            span(ng-if='player === 2 && game.state === 2') Your turn 
+              |(
+              a(href='#' ng-click='quit()') Quit
+              | 
+              a(href='#' ng-click='yeld()') Yield
+              |)
+            span.white-name.pull-right {{game.whitePlayer.firstName || 'Mr. White'}}
+      tbody
+        tr(ng-repeat="n in tr")
+          td(ng-repeat="m in td")
+            .stone-place(ng-if='n > 0 && m !== \'-\'' ng-mouseenter="entered($event)" ng-mouseleave="left($event)" ng-click='move($event)' id='{{m}}-{{n}}', title='{{m}}-{{n}}')
